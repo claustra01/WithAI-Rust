@@ -67,7 +67,7 @@ fn callback(signature: Signature, body: Body) -> Status {
                 // TextMessageEvent only
                 if let EventMessageType::TextMessage(text_message) = message_event.message.r#type {
                     // Get answer by OpenAI
-                    let answer = block_on(openai(text_message.text)).ok().unwrap();
+                    let answer = block_on(openai(text_message.text)).unwrap();
                     // Create TextMessage
                     let message = SendMessageType::TextMessage(TextMessage {
                         text: answer,
@@ -87,8 +87,7 @@ fn callback(signature: Signature, body: Body) -> Status {
     Status::new(500, "Internal Server Error")
 }
 
-#[tokio::main]
-async fn main() {
+fn main() {
     dotenv().ok();
     rocket::ignite().mount("/", routes![callback]).launch();
 }
