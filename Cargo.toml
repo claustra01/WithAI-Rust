@@ -11,3 +11,4 @@ rocket = "0.4"
 line-bot-sdk-rust = { git = "https://github.com/tony84727/line-bot-sdk-rust" , rev = "21a86fb53229ff79cc0165852eea492f635580f8", features = ["rocket_support"] }
 tokio = { version = " 1 ", features = [ "rt-multi-thread", "macros" ] }
 openai-api-rs = "0.1"
+futures = "0.3.26"
