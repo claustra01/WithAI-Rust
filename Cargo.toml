@@ -1,0 +1,13 @@
+[package]
+name = "with_ai_bot"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+dotenv = "0.15.0"
+rocket = "0.4"
+line-bot-sdk-rust = { git = "https://github.com/tony84727/line-bot-sdk-rust" , rev = "21a86fb53229ff79cc0165852eea492f635580f8", features = ["rocket_support"] }
+tokio = { version = " 1 ", features = [ "rt-multi-thread", "macros" ] }
+openai-api-rs = "0.1"
