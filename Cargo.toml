@@ -7,8 +7,8 @@ edition = "2021"
 
 [dependencies]
 dotenv = "0.15.0"
-rocket = "0.4"
-line-bot-sdk-rust = { git = "https://github.com/tony84727/line-bot-sdk-rust" , rev = "21a86fb53229ff79cc0165852eea492f635580f8", features = ["rocket_support"] }
-tokio = { version = " 1 ", features = [ "rt-multi-thread", "macros" ] }
-openai-api-rs = "0.1"
+rocket = "0.4.11"
+line-bot-sdk-rust = { git = "https://github.com/claustra01/line-bot-sdk-rust" , rev = "0d016738954b54d448e08786944bc1c6e8dd4f53", features = ["rocket_support"] }
+tokio = { version = "1.25.0", features = [ "rt-multi-thread", "macros" ] }
+openai-api-rs = "0.1.1"
 futures = "0.3.26"
